@@ -1,0 +1,22 @@
+$margin-col-px: 5px
+$margin-col: 5
+
+@mixin col($num)
+	margin: $margin-col-px
+	border: 1px solid pink
+	box-sizing: border-box
+	width: ((100% * $num) /12) - ($margin-col * 2)
+
+.row 
+	width: 100%
+	max-width: 900px
+	margin: 0 auto
+	display: flex
+	flex-wrap: wrap
+
+.logo
+	@include col(3)
+
+.menu
+	@include col(9)
+
